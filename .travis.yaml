@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+# run this commands on travis
+script:
+  - docker build -t backend-image .
+  - docker run --publish 5000:3001 backend-image
